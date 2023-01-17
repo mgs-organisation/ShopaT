@@ -23,7 +23,7 @@
         </button>
         <button class="button" aria-label="My Discounts">
           <a
-            href="https://github.com/johnpapa/shopathome"
+            href="https://github.com/abrar-khan007/ShopaT"
             target="_blank"
             rel="noopener noreferrer"
           >
