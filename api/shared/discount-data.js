@@ -2,21 +2,21 @@ const data = {
   discounts: [
     {
       id: 10,
-      store: 'Contoso Market',
+      store: 'Google',
       percentage: 30,
-      code: 'contoso30',
+      code: 'Managed by Google',
     },
     {
       id: 20,
-      store: 'Tailwind Trader',
+      store: 'React Managed by Facebook',
       percentage: 20,
-      code: 'tailwind20',
+      code: 'FB20',
     },
     {
       id: 30,
-      store: 'Northwind-Mart',
+      store: 'MicroSoft',
       percentage: 10,
-      code: 'northwind10',
+      code: 'Azure10',
     },
   ],
 };

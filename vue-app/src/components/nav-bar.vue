@@ -41,7 +41,7 @@ export default {
       <p class="menu-label">Menu</p>
       <ul class="menu-list">
         <router-link to="/home">Home</router-link>
-        <router-link to="/products">My List</router-link>
+        <router-link to="/products">List of Favs</router-link>
         <router-link to="/discounts">My Discounts</router-link>
       </ul>
     </nav>

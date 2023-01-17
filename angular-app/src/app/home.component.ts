@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
           </button>
           <button class="button" aria-label="My Discounts">
             <a
-              href="https://github.com/johnpapa/shopathome"
+            https://github.com/abrar-khan007/ShopaT"
               target="_blank"
               rel="noopener noreferrer"
             >
