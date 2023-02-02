@@ -27,10 +27,10 @@ import { Component } from '@angular/core';
             </a>
           </button>
           <button class="button" aria-label="My Discounts">
-            <a
-            https://github.com/abrar-khan007/ShopaT"
-              target="_blank"
-              rel="noopener noreferrer"
+             <a href="
+             https://github.com/abrar-khan007/ShopaT"
+               target="_blank"
+               rel="noopener noreferrer"
             >
               <i class="fab fa-github"></i>
               Code in GitHub
