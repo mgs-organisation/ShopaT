@@ -1,9 +1,9 @@
 <template>
   <div class="content-container">
     <div class="content-title-group">
-      <h2 class="title">Shop at Home</h2>
+      <h2 class="title">DevSecOps + Fullstack</h2>
       <p>
-        Manage your shopping list! Become a preferred customer and gain access
+        Manage your lists! Become a preferred Developer and gain access
         to discount codes, too.
       </p>
       <p>Log in to start enjoying your benefits</p>
@@ -23,7 +23,7 @@
         </button>
         <button class="button" aria-label="My Discounts">
           <a
-            href="https://github.com/johnpapa/shopathome"
+            href="https://github.com/abrar-khan007/ShopaT"
             target="_blank"
             rel="noopener noreferrer"
           >

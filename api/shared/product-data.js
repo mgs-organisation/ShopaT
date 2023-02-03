@@ -2,20 +2,20 @@ const data = {
   products: [
     {
       id: 10,
-      name: 'Strawberries',
-      description: '16oz package of fresh organic strawberries',
+      name: 'Vue Products',
+      description: 'Vue packages Fresh components',
       quantity: '1',
     },
     {
       id: 20,
-      name: 'Sliced bread',
-      description: 'Loaf of fresh sliced wheat bread',
+      name: 'Angular Slice',
+      description: 'Two Way Binding',
       quantity: 1,
     },
     {
       id: 30,
-      name: 'Apples',
-      description: 'Bag of 7 fresh McIntosh apples',
+      name: 'React',
+      description: 'React Use effect has a side Effect',
       quantity: 1,
     },
   ],
