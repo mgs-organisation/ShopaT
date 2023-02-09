@@ -1,0 +1,35 @@
+{
+  "routes": [
+    {
+      "route": "/login/g",
+      "serve": "/.auth/login/github"
+    },
+    {
+      "route": "/login/t",
+      "serve": "/.auth/login/twitter"
+    },
+    {
+      "route": "/.auth/login/facebook",
+      "statusCode": "404"
+    },
+    {
+      "route": "/logout",
+      "serve": "/.auth/logout"
+    },
+    {
+      "route": "/api/products",
+      "allowedRoles": ["admin"]
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ],
+  "platformErrorOverrides": [
+    {
+      "errorType": "NotFound",
+      "serve": "/404.html"
+    }
+  ]
+}
