@@ -1,1 +1,0 @@
-{"ast":null,"code":"const entityMetadata = {\n  Product: {},\n  Discount: {}\n};\nexport const entityConfig = {\n  entityMetadata\n};","map":null,"metadata":{},"sourceType":"module"}
