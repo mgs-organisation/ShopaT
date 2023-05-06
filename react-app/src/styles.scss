@@ -1,21 +1,107 @@
 $vue: #42b883;
-$vue-light: #42b883;
+$vue-light: #77ccaa;
 $angular: #b52e31;
 $angular-light: #eb7a7c;
 $react: #00b3e6;
 $react-light: #61dafb;
+$svelte: #ff3e00;
+$svelte-light: #f38560;
 $primary: $react;
 $primary-light: $react-light;
 $link: $primary; // #00b3e6; // #ff4081;
-
+$info: $primary;
 $shade-light: #fafafa;
+$light-gray: #777;
+$hover-gray: #eee;
 
 @import 'bulma/bulma.sass';
 
-.menu-list .active-link,
-.menu-list .router-link-active {
-  color: #fff;
-  background-color: $link;
+.content-title-group {
+  .button-group {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 170px 170px 170px;
+    @include until($tablet) {
+      grid-template-columns: 170px 170px;
+    }
+    margin-top: 20px;
+    > button.button {
+      background-color: $shade-light;
+      width: 170px;
+      border: 1px solid $light-gray;
+      &:hover {
+        background-color: $hover-gray;
+        a {
+          color: $primary;
+        }
+      }
+      a {
+        color: $light-gray;
+        &:hover {
+          color: $primary;
+        }
+        > i {
+          vertical-align: middle;
+          padding-bottom: 1px;
+          padding-right: 6px;
+        }
+      }
+    }
+  }
+}
+
+.column.is-2 {
+  min-width: 130px;
+  margin-right: 1em;
+}
+.menu {
+  min-width: inherit;
+  .menu-label {
+    color: $primary;
+    font-weight: bold;
+  }
+  .menu-list {
+    border-left: solid $primary-light 2px;
+    .active-link,
+    .router-link-active {
+      color: #fff;
+      background-color: $link;
+    }
+    > a:hover {
+      background-color: $primary-light;
+      color: #fff;
+    }
+  }
+  &.auth {
+    margin-top: 3em;
+    div.auth-link {
+      cursor: pointer;
+      padding: 0.5em 0.75em;
+      &:hover {
+        background-color: $primary-light;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.user {
+  color: $light-gray;
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-left: 0.25em;
+  border-top: 1px solid #999;
+}
+
+.discount-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 100px 200px;
+
+  label {
+    font-weight: bold;
+    padding-right: 8px;
+  }
 }
 
 .not-found {
@@ -99,7 +185,7 @@ header {
   }
   button.button {
     border: 0;
-    color: #999;
+    color: $light-gray;
     &:hover {
       color: $link;
     }
@@ -116,7 +202,7 @@ div.card-content {
   }
   .description {
     font-size: 20px;
-    color: #999;
+    color: $light-gray;
   }
   background-color: $shade-light;
 }
@@ -141,7 +227,7 @@ p.card-header-title {
   i {
     margin-right: 10px;
   }
-  color: #888;
+  color: $light-gray;
   &:hover {
     color: $link;
   }

@@ -10,8 +10,15 @@ export default {
       type: String,
       default: () => '',
     },
+    showAdd: {
+      type: Boolean,
+      default: () => true,
+    },
   },
   methods: {
+    handleAdd() {
+      this.$emit('add');
+    },
     handleRefresh() {
       this.$emit('refresh');
     },
@@ -24,6 +31,14 @@ export default {
     <router-link :to="routePath">
       <h2 class="title">{{ title }}</h2>
     </router-link>
+    <button
+      v-if="showAdd"
+      class="button add-button"
+      @click="handleAdd"
+      aria-label="add"
+    >
+      <i class="fas fa-plus" aria-hidden="true"></i>
+    </button>
     <button
       class="button refresh-button"
       @click="handleRefresh"

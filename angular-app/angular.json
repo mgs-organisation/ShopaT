@@ -71,8 +71,7 @@
                 }
               ]
             }
-          },
-          "defaultConfiguration": ""
+          }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -102,16 +101,13 @@
             "scripts": [],
             "assets": ["src/favicon.ico", "src/assets"]
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     }
   },
-  "defaultProject": "angular-app"
+  "cli": {
+
+    "analytics": "da54dc40-8ede-4378-a9a6-7184591446a4"
+
+  }
 }

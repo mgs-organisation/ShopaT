@@ -1,11 +1,38 @@
-<script>
-  import { CardContent } from '../components';
+<script lang="ts">
+  import { createEventDispatcher } from 'svelte';
+  import { ButtonFooter, CardContent } from '../components';
+  import { Product } from '../models';
 
-  export let products = [];
+  const dispatch = createEventDispatcher();
+  export let products: Product[] = [];
+  export let errorMessage = '';
+
+  function deleteProduct(product: Product) {
+    dispatch('deleted', product);
+  }
+
+  function selectProduct(product: Product) {
+    dispatch('selected', product);
+  }
+
+  const deleteOptions = {
+    className: 'delete-item',
+    label: 'Delete',
+    iconClasses: 'fas fa-trash',
+  };
+
+  const editOptions = {
+    className: 'edit-item',
+    label: 'Edit',
+    iconClasses: 'fas fa-edit',
+  };
 </script>
 
 <div>
-  {#if !products.length}
+  {#if errorMessage}
+    <div>{errorMessage}</div>
+  {/if}
+  {#if !products.length && !errorMessage}
     <div>Loading data ...</div>
   {/if}
   <ul class="list">
@@ -13,6 +40,20 @@
       <li role="presentation">
         <div class="card">
           <CardContent {name} {description} />
+          <footer class="card-footer">
+            <ButtonFooter
+              {...deleteOptions}
+              dataId={id}
+              dataIndex={i}
+              item={products[i]}
+              on:clicked={() => deleteProduct(products[i])} />
+            <ButtonFooter
+              {...editOptions}
+              dataId={id}
+              dataIndex={i}
+              item={products[i]}
+              on:clicked={() => selectProduct(products[i])} />
+          </footer>
         </div>
       </li>
     {/each}

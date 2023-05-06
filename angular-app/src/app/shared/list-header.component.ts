@@ -8,6 +8,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
         <h2 class="title">{{ title }}</h2>
       </a>
       <button
+        *ngIf="showAdd"
+        class="button add-button"
+        (click)="handleAdd()"
+        aria-label="add"
+      >
+        <i class="fas fa-plus" aria-hidden="true"></i>
+      </button>
+      <button
         class="button refresh-button"
         (click)="handleRefresh()"
         aria-label="refresh"
@@ -19,10 +27,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ListHeaderComponent implements OnInit {
   @Input() title: string;
+  @Input() showAdd: boolean = true;
+  @Output() add = new EventEmitter();
   @Output() refresh = new EventEmitter();
 
   ngOnInit() {}
 
+  handleAdd() {
+    this.add.emit();
+  }
   handleRefresh() {
     this.refresh.emit();
   }
